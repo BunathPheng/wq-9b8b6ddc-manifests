@@ -1,0 +1,10 @@
+namespace: smartops-api
+
+image:
+  imageRepository: docker.io/phengbunath/wq-9b8b6ddc
+  tag: 1
+
+service:
+  type: ClusterIP
+  port: 8080
+  targetPort: 8080
