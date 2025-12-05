@@ -1,0 +1,16 @@
+---
+# Source: helm for kubernetes/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: wq-9b8b6ddc          # Service name
+  labels:
+    app: wq-9b8b6ddc
+spec:
+  type: ClusterIP   # Service type (ClusterIP, NodePort, LoadBalancer)
+  selector:
+    app: wq-9b8b6ddc         # Matches Deployment labels
+  ports:
+    - protocol: TCP
+      port: 8080         # Service port
+      targetPort: 8080  # Target container port
